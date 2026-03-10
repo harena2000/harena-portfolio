@@ -17,7 +17,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      subtitle: 'Lead Developer · Mobile & Web',
+      subtitle: 'Mobile & Web Developer',
       yearsExp: 'Years of Experience',
       projects: 'Projects Delivered',
       technologies: 'Technologies',
@@ -67,7 +67,7 @@ export const translations = {
     },
     about: {
       title: 'À Propos',
-      subtitle: 'Lead Developer · Mobile & Web',
+      subtitle: 'Développeur Mobile & Web',
       yearsExp: "Années d'expérience",
       projects: 'Projets livrés',
       technologies: 'Technologies',
