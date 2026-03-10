@@ -48,8 +48,8 @@ export function Navbar({ locale, toggleLocale, tr }: NavbarProps) {
             backdropFilter: 'blur(24px) saturate(180%)',
             WebkitBackdropFilter: 'blur(24px) saturate(180%)',
             backgroundColor: scrolled
-              ? 'rgba(9, 9, 11, 0.7)'
-              : 'rgba(9, 9, 11, 0.25)',
+              ? 'rgba(30, 30, 36, 0.72)'
+              : 'rgba(30, 30, 36, 0.45)',
           }}
         >
           {/* Logo */}
