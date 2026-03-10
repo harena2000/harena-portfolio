@@ -41,9 +41,16 @@ export function Navbar({ locale, toggleLocale, tr }: NavbarProps) {
           className={cn(
             'flex items-center justify-between px-4 py-2.5 rounded-full transition-all duration-500',
             scrolled
-              ? 'bg-zinc-950/75 backdrop-blur-xl border border-zinc-800/60 shadow-xl shadow-black/30'
-              : 'bg-zinc-950/30 backdrop-blur-md border border-zinc-800/30'
+              ? 'border border-zinc-700/50 shadow-2xl shadow-black/40'
+              : 'border border-white/5'
           )}
+          style={{
+            backdropFilter: 'blur(24px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+            backgroundColor: scrolled
+              ? 'rgba(9, 9, 11, 0.7)'
+              : 'rgba(9, 9, 11, 0.25)',
+          }}
         >
           {/* Logo */}
           <motion.a
@@ -113,8 +120,12 @@ export function Navbar({ locale, toggleLocale, tr }: NavbarProps) {
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
-              className="mt-2 rounded-2xl overflow-hidden border border-zinc-800/60 shadow-xl shadow-black/30"
-              style={{ background: 'rgba(9,9,11,0.85)', backdropFilter: 'blur(20px)' }}
+              className="mt-2 rounded-2xl overflow-hidden border border-zinc-700/40 shadow-2xl shadow-black/40"
+              style={{
+                backdropFilter: 'blur(24px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                backgroundColor: 'rgba(9, 9, 11, 0.75)',
+              }}
               initial={{ opacity: 0, y: -8, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.97 }}
