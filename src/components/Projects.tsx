@@ -33,15 +33,25 @@ function ProjectCard({
 }) {
   return (
     <motion.article
-      className="glass rounded-2xl p-6 glow-hover group relative overflow-hidden"
+      className="rounded-2xl p-6 group relative overflow-hidden transition-all duration-300"
+      style={{
+        background: 'linear-gradient(135deg, rgba(24,24,27,0.95) 0%, rgba(15,15,18,0.98) 100%)',
+        border: '1px solid rgba(63,63,70,0.5)',
+      }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -4, borderColor: 'rgba(59,130,246,0.4)' }}
     >
+      {/* Gradient shimmer on hover */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(59,130,246,0.08) 0%, transparent 70%)' }}
+      />
       {/* Accent bar */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ background: 'linear-gradient(90deg, transparent, #3b82f6, #60a5fa, #3b82f6, transparent)' }}
+      />
 
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-3">
@@ -49,7 +59,10 @@ function ProjectCard({
           {project.title}
         </h3>
         {project.featured && (
-          <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-400 font-medium">
+          <span
+            className="shrink-0 text-xs px-2.5 py-0.5 rounded-full text-white font-medium"
+            style={{ background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)', boxShadow: '0 0 12px rgba(59,130,246,0.4)' }}
+          >
             Featured
           </span>
         )}

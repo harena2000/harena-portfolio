@@ -57,14 +57,22 @@ export function Hero({ locale, tr }: HeroProps) {
       {/* Floating orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-blue-600/5 blur-3xl"
+          className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%)' }}
           animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-blue-800/5 blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(30,64,175,0.14) 0%, transparent 70%)' }}
           animate={{ x: [0, -20, 0], y: [0, 30, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        />
+        <motion.div
+          className="absolute top-2/3 left-1/6 w-48 h-48 rounded-full blur-3xl"
+          style={{ background: 'radial-gradient(circle, rgba(96,165,250,0.1) 0%, transparent 70%)' }}
+          animate={{ x: [0, 15, 0], y: [0, -15, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         />
       </div>
 
@@ -77,11 +85,18 @@ export function Hero({ locale, tr }: HeroProps) {
           transition={{ duration: 0.5, ease: 'backOut' }}
         >
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 blur-md opacity-50 scale-110" />
+            {/* Outer rotating gradient ring */}
+            <motion.div
+              className="absolute -inset-1.5 rounded-full"
+              style={{ background: 'conic-gradient(from 0deg, #3b82f6, #1d4ed8, #1e3a8a, #3b82f6)', opacity: 0.7 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
+            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/60 to-blue-700/60 blur-xl scale-125" />
             <img
               src={personalInfo.photo}
               alt={personalInfo.name}
-              className="relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-2 border-blue-500/50 shadow-2xl"
+              className="relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-2 border-zinc-950 shadow-2xl"
             />
             <div className="absolute bottom-1 right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-zinc-950 animate-pulse" />
           </div>
@@ -99,12 +114,12 @@ export function Hero({ locale, tr }: HeroProps) {
 
         {/* Name */}
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-zinc-100 mb-4 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          {personalInfo.firstName}
+          <span className="gradient-text-wide">{personalInfo.firstName}</span>
           <br />
           <span className="gradient-text">{personalInfo.lastName}</span>
         </motion.h1>
@@ -130,7 +145,7 @@ export function Hero({ locale, tr }: HeroProps) {
         >
           <motion.button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-full transition-all duration-200 shadow-lg shadow-blue-900/30 glow-hover"
+            className="px-8 py-3.5 gradient-btn text-white font-medium rounded-full transition-all duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

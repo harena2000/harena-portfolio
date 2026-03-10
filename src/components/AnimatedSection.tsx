@@ -38,11 +38,15 @@ export function SectionHeader({
 }) {
   return (
     <div className={cn('mb-12 text-center', className)}>
-      <h2 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-3">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold gradient-text-wide mb-3">{title}</h2>
       {subtitle && (
         <p className="text-zinc-500 text-base">{subtitle}</p>
       )}
-      <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-blue-400 to-blue-600" />
+      <div className="mt-4 mx-auto flex items-center justify-center gap-1">
+        <div className="w-2 h-2 rounded-full" style={{ background: 'linear-gradient(135deg, #60a5fa, #2563eb)' }} />
+        <div className="w-16 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg, #3b82f6, #1d4ed8, #1e3a8a)' }} />
+        <div className="w-2 h-2 rounded-full" style={{ background: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)' }} />
+      </div>
     </div>
   )
 }

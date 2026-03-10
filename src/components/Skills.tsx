@@ -10,11 +10,19 @@ interface SkillsProps {
 }
 
 const categoryColorMap: Record<string, string> = {
-  blue: 'border-blue-500/30 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400/50',
-  cyan: 'border-cyan-500/30 text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 hover:border-cyan-400/50',
-  gray: 'border-zinc-500/30 text-zinc-300 bg-zinc-500/10 hover:bg-zinc-500/20 hover:border-zinc-400/50',
-  slate: 'border-slate-500/30 text-slate-300 bg-slate-500/10 hover:bg-slate-500/20 hover:border-slate-400/50',
-  zinc: 'border-zinc-600/30 text-zinc-400 bg-zinc-600/10 hover:bg-zinc-600/20 hover:border-zinc-500/50',
+  blue: 'border-blue-500/40 text-blue-200 hover:border-blue-400/70 hover:text-white',
+  cyan: 'border-blue-400/30 text-blue-300 hover:border-blue-300/60 hover:text-white',
+  gray: 'border-zinc-600/40 text-zinc-300 hover:border-zinc-400/60 hover:text-white',
+  slate: 'border-zinc-500/30 text-zinc-400 hover:border-zinc-400/50 hover:text-zinc-200',
+  zinc: 'border-zinc-700/40 text-zinc-500 hover:border-zinc-500/60 hover:text-zinc-300',
+}
+
+const categoryGradientMap: Record<string, string> = {
+  blue: 'linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(30,64,175,0.08) 100%)',
+  cyan: 'linear-gradient(135deg, rgba(96,165,250,0.14) 0%, rgba(59,130,246,0.06) 100%)',
+  gray: 'linear-gradient(135deg, rgba(113,113,122,0.15) 0%, rgba(82,82,91,0.05) 100%)',
+  slate: 'linear-gradient(135deg, rgba(100,116,139,0.12) 0%, rgba(71,85,105,0.05) 100%)',
+  zinc: 'linear-gradient(135deg, rgba(82,82,91,0.12) 0%, rgba(63,63,70,0.04) 100%)',
 }
 
 const container = {
@@ -53,16 +61,19 @@ export function Skills({ locale, tr }: SkillsProps) {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div
-                    className={cn(
-                      'w-1.5 h-1.5 rounded-full',
-                      cat.color === 'blue' ? 'bg-blue-400' :
-                      cat.color === 'cyan' ? 'bg-cyan-400' :
-                      'bg-zinc-500'
-                    )}
+                    className="w-2 h-2 rounded-full"
+                    style={{
+                      background: cat.color === 'blue'
+                        ? 'linear-gradient(135deg, #60a5fa, #2563eb)'
+                        : cat.color === 'cyan'
+                        ? 'linear-gradient(135deg, #93c5fd, #3b82f6)'
+                        : 'linear-gradient(135deg, #a1a1aa, #52525b)',
+                    }}
                   />
-                  <span className="text-xs font-medium text-zinc-500 uppercase tracking-widest">
+                  <span className="text-xs font-semibold text-zinc-400 uppercase tracking-widest">
                     {cat[locale]}
                   </span>
+                  <div className="flex-1 h-px bg-gradient-to-r from-zinc-800 to-transparent" />
                 </div>
 
                 <motion.div
@@ -77,10 +88,11 @@ export function Skills({ locale, tr }: SkillsProps) {
                       key={skill.name}
                       variants={item}
                       className={cn(
-                        'px-5 py-2.5 rounded-full border text-sm font-medium cursor-default transition-all duration-200',
+                        'px-5 py-2.5 rounded-full border text-sm font-medium cursor-default transition-all duration-300',
                         categoryColorMap[cat.color]
                       )}
-                      whileHover={{ scale: 1.05, y: -2 }}
+                      style={{ background: categoryGradientMap[cat.color] }}
+                      whileHover={{ scale: 1.07, y: -3 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       {skill.name}

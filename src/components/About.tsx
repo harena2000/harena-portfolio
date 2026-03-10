@@ -52,10 +52,18 @@ export function About({ locale, tr }: AboutProps) {
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.key}
-                className="glass rounded-2xl p-6 text-center glow-hover"
-                whileHover={{ y: -4 }}
+                className="rounded-2xl p-6 text-center relative overflow-hidden group"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(30,64,175,0.15) 0%, rgba(15,23,42,0.8) 60%, rgba(59,130,246,0.08) 100%)',
+                  border: '1px solid rgba(59,130,246,0.2)',
+                }}
+                whileHover={{ y: -4, borderColor: 'rgba(59,130,246,0.5)' } as Parameters<typeof motion.div>[0]['whileHover']}
                 transition={{ delay: i * 0.05 }}
               >
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ background: 'radial-gradient(circle at 50% 0%, rgba(59,130,246,0.12), transparent 70%)' }}
+                />
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
                 <div className="text-zinc-500 text-xs leading-snug">
                   {tr.about[stat.key as keyof typeof tr.about]}
