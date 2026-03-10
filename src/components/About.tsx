@@ -17,7 +17,7 @@ interface AboutProps {
 }
 
 const stats = [
-  { key: 'yearsExp', value: '3.5+' },
+  { key: 'yearsExp', value: '4+' },
   { key: 'projects', value: '5+' },
   { key: 'technologies', value: '12+' },
 ]
