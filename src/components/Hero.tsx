@@ -53,7 +53,7 @@ export function Hero({ locale, tr }: HeroProps) {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg grid-pattern noise">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg noise">
       {/* Floating orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
