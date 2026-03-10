@@ -24,7 +24,7 @@ const stats = [
 
 export function About({ locale, tr }: AboutProps) {
   return (
-    <AnimatedSection id="about" className="py-24 md:py-32 section-about-bg">
+    <AnimatedSection id="about" className="py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader title={tr.about.title} subtitle={tr.about.subtitle} />
 

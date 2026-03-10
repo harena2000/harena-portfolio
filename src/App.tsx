@@ -13,7 +13,7 @@ export default function App() {
   const { locale, toggleLocale, tr } = useLocale()
 
   return (
-    <div className="relative min-h-screen bg-zinc-950">
+    <div className="relative min-h-screen bg-zinc-950 portfolio-bg">
       <ParticleBackground />
       <div className="relative z-10">
         <Navbar locale={locale} toggleLocale={toggleLocale} tr={tr} />
