@@ -109,14 +109,13 @@
 /* Full-page unified gradient background */
 .portfolio-bg {
   background:
-    radial-gradient(ellipse 80% 25% at 50%  5%,  rgba(59, 130, 246, 0.18), transparent),
-    radial-gradient(ellipse 50% 20% at 90%  18%, rgba(30,  58, 138, 0.12), transparent),
-    radial-gradient(ellipse 60% 20% at 10%  32%, rgba(59, 130, 246, 0.10), transparent),
-    radial-gradient(ellipse 70% 20% at 50%  48%, rgba(30,  58, 138, 0.11), transparent),
-    radial-gradient(ellipse 55% 18% at 85%  62%, rgba(59, 130, 246, 0.09), transparent),
-    radial-gradient(ellipse 60% 18% at 15%  75%, rgba(30,  58, 138, 0.10), transparent),
-    radial-gradient(ellipse 70% 20% at 50%  90%, rgba(59, 130, 246, 0.13), transparent);
-  background-attachment: fixed;
+    radial-gradient(ellipse 80% 12% at 50%  4%,  rgba(59, 130, 246, 0.18), transparent),
+    radial-gradient(ellipse 50% 10% at 90%  16%, rgba(30,  58, 138, 0.12), transparent),
+    radial-gradient(ellipse 60% 10% at 10%  30%, rgba(59, 130, 246, 0.10), transparent),
+    radial-gradient(ellipse 70% 10% at 50%  47%, rgba(30,  58, 138, 0.11), transparent),
+    radial-gradient(ellipse 55%  9% at 85%  61%, rgba(59, 130, 246, 0.09), transparent),
+    radial-gradient(ellipse 60%  9% at 15%  74%, rgba(30,  58, 138, 0.10), transparent),
+    radial-gradient(ellipse 70% 10% at 50%  88%, rgba(59, 130, 246, 0.13), transparent);
 }
 
 /* Noise texture overlay */
