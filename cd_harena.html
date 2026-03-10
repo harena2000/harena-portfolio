@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>CV - Harena Rico Mahefaniaina</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+      background: #2c3e50;
+      color: white;
+      padding: 30px 30px;
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: block;
+      border: 4px solid #3498db;
+      object-fit: cover;
+    }
+
+    .sidebar h1 {
+      font-size: 23px;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .sidebar h2 {
+      font-size: 17px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      color: #ecf0f1;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3498db;
+    }
+
+    .contact-item {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #3498db;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: #34495e;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 11px;
+    }
+
+    .language-item {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .main-content {
+      padding: 40px;
+    }
+
+    .profile {
+      margin-bottom: 15px;
+    }
+
+    .profile p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .main-section {
+      margin-bottom: 35px;
+    }
+
+    .main-section-title {
+      font-size: 19px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #3498db;
+    }
+
+    .project-item,
+    .education-item {
+      margin-bottom: 25px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-size: 15px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .project-date {
+      font-size: 11px;
+      color: #7f8c8d;
+    }
+
+    .project-subtitle {
+      font-size: 13px;
+      color: #3498db;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .project-description {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .tech-stack {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #7f8c8d;
+    }
+
+    .tech-stack strong {
+      color: #2c3e50;
+    }
+
+    /* ------------------- PRINT STYLES ------------------- */
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        background: white !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        box-shadow: none !important;
+        width: 100%;
+        max-width: none !important;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 35% 65%;
+      }
+
+      .sidebar {
+        background: #2c3e50 !important;
+        color: white !important;
+        padding: 20px !important;
+      }
+
+      .main-content {
+        padding: 20px !important;
+      }
+
+      /* Prevent page breaks inside main sections */
+      .main-section,
+      .sidebar,
+      .profile {
+        page-break-inside: avoid;
+      }
+
+      /* Scale down slightly if needed to fit all in one page */
+      html,
+      body {
+        transform: scale(1);
+        transform-origin: top left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img
+        src="harena.jpg"
+        alt="Harena Rico Mahefaniaina"
+        class="profile-photo"
+      >
+      <h1>Harena Rico<br>Mahefaniaina</h1>
+      <h2>Développeur Mobile & Web</h2>
+
+      <div class="section">
+        <div class="section-title">Contact</div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          harenaricom@gmail.com
+        </div>
+        <div class="contact-item">
+          <strong>Mobile</strong>
+          +261 34 33 13 551
+        </div>
+        <div class="contact-item">
+          <strong>Adresse</strong>
+          Lot TR42 Ampahimanga<br>
+          Ambohimanambola
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Compétences</div>
+        <div class="skills-list">
+          <div class="skill-tag">Flutter</div>
+          <div class="skill-tag">Dart</div>
+          <div class="skill-tag">Vue.js</div>
+          <div class="skill-tag">React</div>
+          <div class="skill-tag">TypeScript</div>
+          <div class="skill-tag">Django</div>
+          <div class="skill-tag">Next.js</div>
+          <div class="skill-tag">Express.js</div>
+          <div class="skill-tag">Laravel</div>
+          <div class="skill-tag">PostgreSQL</div>
+          <div class="skill-tag">QGIS</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Langues</div>
+        <div class="language-item">Français</div>
+        <div class="language-item">English</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Éducation</div>
+        <div class="contact-item">
+          <strong>2019-2022</strong>
+          Licence en Informatique<br>
+          Parcours Génie Logiciel<br>
+          Université Adventiste Zurcher
+        </div>
+        <div class="contact-item">
+          <strong>2018</strong>
+          Baccalauréat<br>
+          Lycée Privée Adventiste<br>
+          Julien Ramamonjisoa
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="profile">
+        <p>Lead Développeur mobile et web expérimenté avec plus de 3 ans et demi d'expertise chez Futurmap. Spécialisé
+          en développement Flutter avec une solide maîtrise des technologies web modernes (Node.js, Vue.js, Django,
+          Next.js). Expert en solutions SIG et intégration de systèmes géospatiaux complexes.</p>
+      </div>
+
+      <div class="main-section">
+        <div class="main-section-title">Projets</div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">ZakaJiaby</div>
+            <div class="project-date">Avril 2025 - Présent</div>
+          </div>
+          <div class="project-subtitle">Freelance | Application Mobile Flutter</div>
+          <div class="project-description">
+            Application mobile de gestion budgétaire, d'événements et d'activités pour des groupes de personnes. Projet
+            en cours de développement utilisant Flutter pour offrir une expérience utilisateur fluide et performante sur
+            iOS et Android.
+          </div>
+          <div class="tech-stack"><strong>Technologies :</strong> Flutter, Dart</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Plateforme WebSIG</div>
+            <div class="project-date">Séptembre 2025 - Présent</div>
+          </div>
+          <div class="project-subtitle">Futurmap | Application Web SIG</div>
+          <div class="project-description">
+            Développement d'une plateforme WebSIG complète avec une intégration du QGIS. Création d'un plugin QGIS
+            personnalisé communiquant via WebSocket pour synchroniser les modifications directement avec l'application
+            web. Mise en place d'un système d'affichage de couches géospatiales sur les images et une carte
+            interactive. Développement d'un viewer innovant transformant les images panoramiques en expérience 360°
+            immersive.
+          </div>
+          <div class="tech-stack"><strong>Technologies :</strong> Django, Next.js, Python, TypeScript, WebSocket,
+            Leaflet, OpenStreetMap, PostgreSQL, QGIS Plugin Development</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Système de Ticketing</div>
+            <div class="project-date">Séptembre 2025 - Présent</div>
+          </div>
+          <div class="project-subtitle">Freelance | Application Web</div>
+          <div class="project-description">
+            Conception et développement d'une plateforme de gestion de tickets complète avec backend Node.js et
+            interface utilisateur moderne en Vue.js. Architecture robuste permettant la gestion efficace des demandes,
+            le suivi des tickets et la collaboration en temps réel.
+          </div>
+          <div class="tech-stack"><strong>Technologies :</strong> Node.js, Express, Vue.js, TypeScript, PostgreSQL</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Application InsideGolf</div>
+            <div class="project-date">Février 2024 - Avril 2025</div>
+          </div>
+          <div class="project-subtitle">Futurmap | Application Mobile Flutter</div>
+          <div class="project-description">
+            Développement d'une application mobile dédiée au golf avec Flutter, offrant une expérience utilisateur
+            optimale et des fonctionnalités avancées pour les passionnés de golf.
+          </div>
+          <div class="tech-stack"><strong>Technologies :</strong> Flutter, Dart</div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <div class="project-title">Application SingSong</div>
+            <div class="project-date">Avril - Juillet 2024</div>
+          </div>
+          <div class="project-subtitle">Freelance | Application Mobile Flutter</div>
+          <div class="project-description">
+            Développement d'une application mobile innovante utilisant Flutter pour une expérience utilisateur moderne
+            et performante sur plusieurs plateformes.
+          </div>
+          <div class="tech-stack"><strong>Technologies :</strong> Flutter, Dart</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

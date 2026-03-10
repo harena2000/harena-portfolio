@@ -41,7 +41,7 @@ export function Contact({ locale, tr }: ContactProps) {
   ]
 
   return (
-    <AnimatedSection id="contact" className="py-24 md:py-32">
+    <AnimatedSection id="contact" className="py-24 md:py-32 section-contact-bg">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader title={tr.contact.title} subtitle={tr.contact.subtitle} />
 

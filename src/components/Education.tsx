@@ -11,7 +11,7 @@ interface EducationProps {
 
 export function Education({ locale, tr }: EducationProps) {
   return (
-    <AnimatedSection id="education" className="py-24 md:py-32">
+    <AnimatedSection id="education" className="py-24 md:py-32 section-education-bg">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader title={tr.education.title} subtitle={tr.education.subtitle} />
 

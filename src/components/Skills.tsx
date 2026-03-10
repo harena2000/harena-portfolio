@@ -42,7 +42,7 @@ export function Skills({ locale, tr }: SkillsProps) {
   ][]
 
   return (
-    <AnimatedSection id="skills" className="py-24 md:py-32">
+    <AnimatedSection id="skills" className="py-24 md:py-32 section-skills-bg">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader title={tr.skills.title} subtitle={tr.skills.subtitle} />
 

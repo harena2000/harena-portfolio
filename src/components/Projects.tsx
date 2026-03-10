@@ -110,7 +110,7 @@ export function Projects({ locale, tr }: ProjectsProps) {
   const visibleProjects = showAll ? projects : featured
 
   return (
-    <AnimatedSection id="projects" className="py-24 md:py-32">
+    <AnimatedSection id="projects" className="py-24 md:py-32 section-projects-bg">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader title={tr.projects.title} subtitle={tr.projects.subtitle} />
 
